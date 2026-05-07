@@ -9,7 +9,7 @@ The project downloads the current public archive, normalizes the records needed 
 
 ## At a glance
 
-- **Input:** public CNEL current CCNL open data
+- **Input:** public CCNL open data from CNEL
 - **Core engine:** Python + Pydantic
 - **Frontend:** Vite + React + TypeScript + Tailwind CSS
 - **Output:** static frontend assets and compact JSON files
