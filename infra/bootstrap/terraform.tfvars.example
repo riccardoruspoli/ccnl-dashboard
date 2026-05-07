@@ -1,0 +1,10 @@
+aws_region                  = "us-east-1"
+project                     = "ccnl-dashboard"
+environment                 = "prod"
+terraform_state_bucket_name = "ccnl-dashboard-prod-tfstate-us-east-1"
+
+tags = {
+  Project     = "ccnl-dashboard"
+  Environment = "prod"
+  ManagedBy   = "terraform"
+}

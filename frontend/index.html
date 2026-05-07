@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoraggio CCNL | Scadenze contrattuali italiane</title>
+    <meta
+      name="description"
+      content="Dashboard open data per monitorare lo stato di scadenza dei CCNL italiani correnti, i giorni di ritardo nel rinnovo e le metriche aggregate."
+    />
+    <meta
+      name="keywords"
+      content="CCNL, contratti collettivi, contratti collettivi nazionali, scadenze CCNL, rinnovi CCNL, CNEL, open data, lavoro, Italia"
+    />
+    <meta name="author" content="Riccardo Ruspoli" />
+    <meta name="creator" content="Riccardo Ruspoli" />
+    <meta name="publisher" content="Riccardo Ruspoli" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="application-name" content="Monitoraggio CCNL" />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="https://ccnl.riccardoruspoli.com/" />
+    <link rel="author" href="https://riccardoruspoli.com" />
+    <link
+      rel="license"
+      href="https://github.com/riccardoruspoli/ccnl-dashboard/blob/master/LICENSE"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Monitoraggio CCNL" />
+    <meta
+      property="og:title"
+      content="Monitoraggio CCNL | Scadenze contrattuali italiane"
+    />
+    <meta
+      property="og:description"
+      content="Dashboard open data per monitorare lo stato di scadenza dei CCNL italiani correnti, i giorni di ritardo nel rinnovo e le metriche aggregate."
+    />
+    <meta property="og:url" content="https://ccnl.riccardoruspoli.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Monitoraggio CCNL | Scadenze contrattuali italiane"
+    />
+    <meta
+      name="twitter:description"
+      content="Dashboard open data per monitorare scadenze, rinnovi e metriche aggregate dei CCNL italiani correnti."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <main>
+        <h1>Monitoraggio CCNL</h1>
+        <p>
+          Dashboard open data per monitorare lo stato di scadenza dei CCNL
+          italiani correnti, i giorni di ritardo nel rinnovo e le metriche
+          aggregate.
+        </p>
+        <p>
+          I dati sono elaborati da
+          <a
+            href="https://www.cnel.it/Archivio-Contratti-Collettivi/Contratti-Open-Data"
+            >CNEL Open Data</a
+          >
+          e ridistribuiti secondo la
+          <a
+            href="https://www.dati.gov.it/content/italian-open-data-license-v20"
+            >Italian Open Data License v2.0</a
+          >.
+        </p>
+        <p>
+          Il progetto e indipendente e ha scopo informativo. La dashboard
+          interattiva richiede JavaScript.
+        </p>
+        <ul>
+          <li><a href="/data/ccnl.current.json">Dataset CCNL corrente</a></li>
+          <li><a href="/data/metrics.json">Metriche aggregate</a></li>
+        </ul>
+      </main>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+aws_region      = "us-east-1"
+project         = "ccnl-dashboard"
+environment     = "prod"
+resource_prefix = "ccnl-dashboard-prod"
+
+site_bucket_name = "ccnl-dashboard-prod-site-us-east-1"
+public_hostname  = "ccnl.example.com"
+notification_email = "REPLACE_WITH_EMAIL"
+monthly_budget_limit_usd = "30"
+
+enable_custom_domain = false
+
+site_build_source_type        = "GITHUB"
+site_build_source_location    = "https://github.com/OWNER/REPOSITORY.git"
+site_build_source_version     = "master"
+site_build_buildspec_path     = "infra/main/buildspec.yml"
+site_build_image              = "aws/codebuild/standard:7.0"
+site_build_compute_type       = "BUILD_GENERAL1_SMALL"
+site_build_timeout_minutes    = 30
+site_build_schedule_expression = "cron(0 7 ? * MON *)"
+site_build_schedule_timezone   = "Europe/Rome"
+site_build_schedule_state      = "ENABLED"
+
+log_retention_days = 30
+
+tags = {
+  Project     = "ccnl-dashboard"
+  Environment = "prod"
+  ManagedBy   = "terraform"
+}

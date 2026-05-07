@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  shell: bash
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+      nodejs: 22
+    commands:
+      - python -m pip install --user --disable-pip-version-check --no-cache-dir --only-binary=:all: "uv==0.11.7"
+      - export PATH="$HOME/.local/bin:$PATH"
+      - uv --version
+      - node --version
+      - npm --version
+  pre_build:
+    commands:
+      - uv sync --extra dev
+      - npm ci --prefix frontend
+  build:
+    commands:
+      - uv run ccnl-dashboard build
+  post_build:
+    commands:
+      - aws s3 sync dist "s3://${SITE_BUCKET}" --delete
+      - aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --paths "/*"
